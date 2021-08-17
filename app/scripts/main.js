@@ -233,6 +233,7 @@ mainModule.controller('mainController', function ($window, $http, $scope, $rootS
             $uibModalStack.dismissAll();
             $('.modal-backdrop').hide()
             $scope.closeSession();
+            console.log("hello")
         } else {
             $http.get(JSON.parse(localStorage['schedulerRestUrl']) + 'isconnected/', {headers: {'sessionID': sessionId}})
                 .then(function (response) {
